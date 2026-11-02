@@ -2,16 +2,16 @@
   "name": "badge-3d",
   "version": "0.1.0",
   "description": "Draggable 3D conference badge with a physics lanyard (React Three Fiber + Rapier). Drop-in <script> or React component.",
-  "license": "UNLICENSED",
-  "author": "",
+  "license": "MIT",
+  "author": "Maxsteal91",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/badge-3d.git"
+    "url": "git+https://github.com/Maxsteal91/badge-3d.git"
   },
-  "homepage": "https://OWNER.github.io/badge-3d/",
+  "homepage": "https://Maxsteal91.github.io/badge-3d/",
   "bugs": {
-    "url": "https://github.com/OWNER/badge-3d/issues"
+    "url": "https://github.com/Maxsteal91/badge-3d/issues"
   },
   "keywords": [
     "badge",

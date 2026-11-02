@@ -4,7 +4,7 @@ A draggable 3D conference badge hanging from a physics-driven lanyard, for any w
 Built with [React Three Fiber](https://github.com/pmndrs/react-three-fiber) and [Rapier](https://rapier.rs/).
 The card artwork (name, role, contacts, QR code, logo, colors) is drawn at runtime from a plain config object.
 
-**[Live playground →](https://OWNER.github.io/badge-3d/)** – edit the fields and copy the snippet.
+**[Live playground →](https://Maxsteal91.github.io/badge-3d/)** – edit the fields and copy the snippet.
 
 <!-- ![badge-3d](docs/screenshot.png) -->
 
@@ -143,5 +143,5 @@ Export with *File → Export → glTF 2.0*: **glTF Binary (.glb)**, *+Y Up* on, 
 
 ## License
 
-License to be decided – see [LICENSE](LICENSE). The bundled Geist fonts are under the
+[MIT](LICENSE) © Maxsteal91. The bundled Geist fonts are under the
 [SIL Open Font License](src/assets/fonts/OFL-Geist.txt).
