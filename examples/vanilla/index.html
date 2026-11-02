@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>badge-3d – vanilla example</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #fafafa; }
+    .row { display: flex; flex-wrap: wrap; }
+    .info { flex: 1 1 300px; padding: 24px; }
+    .badge { flex: 1 1 400px; height: 600px; }
+  </style>
+</head>
+<body>
+  <!-- 1. Declarative: config as JSON inside the element -->
+  <div class="row">
+    <div class="info"><h1>Declarative</h1><p>Mounted automatically from <code>data-badge-3d</code>.</p></div>
+    <div class="badge" data-badge-3d>
+      <script type="application/json">
+        { "firstName": "Ada", "lastName": "Lovelace", "role": "Analyst", "company": "Engine Co.", "tag": "LONDON",
+          "colors": { "accent": "#e4572e", "lanyard": "#2b1d14" } }
+      </script>
+    </div>
+  </div>
+
+  <!-- 2. Programmatic: mount() + update() -->
+  <div class="row">
+    <div class="info">
+      <h1>Programmatic</h1>
+      <p><button id="swap">Change name</button></p>
+    </div>
+    <div class="badge" id="manual"></div>
+  </div>
+
+  <!-- local build: copy dist/standalone/ to ./vendor/  (or use the CDN URL) -->
+  <script type="module">
+    import { mount } from './vendor/badge.js'
+    const badge = mount('#manual', { firstName: 'Grace', lastName: 'Hopper', role: 'Rear Admiral', qr: null })
+    document.getElementById('swap').onclick = () =>
+      badge.update({ firstName: 'Alan', lastName: 'Turing', role: 'Mathematician', colors: { accent: '#2f6bff' } })
+  </script>
+</body>
+</html>

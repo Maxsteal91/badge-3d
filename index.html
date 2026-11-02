@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badge 3D – playground</title>
+    <meta name="description" content="Draggable 3D badge with lanyard for any website. Configure it and copy the snippet." />
+    <link rel="stylesheet" href="/demo/playground.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <aside class="panel">
+        <header>
+          <h1>Badge 3D</h1>
+          <p>Drag the card. Edit the fields, then copy the snippet into your site.</p>
+          <p class="links"><a href="https://github.com/OWNER/badge-3d">GitHub</a> · <a href="https://www.npmjs.com/package/badge-3d">npm</a></p>
+        </header>
+
+        <form id="form" autocomplete="off">
+          <fieldset>
+            <legend>Identity</legend>
+            <label>First name <input name="firstName" /></label>
+            <label>Last name <input name="lastName" /></label>
+            <label>Role <input name="role" /></label>
+            <label>Company <input name="company" /></label>
+            <label>Tag <input name="tag" /></label>
+            <label>Lanyard text <input name="lanyardText" placeholder="defaults to full name" /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Links</legend>
+            <label>Contacts <small>one per line, <code>Label: value</code></small>
+              <textarea name="contacts" rows="3"></textarea></label>
+            <label>QR code content <input name="qr" placeholder="empty = no QR" /></label>
+            <label>Back link <input name="mainLink" placeholder="empty = none" /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Images <small>URLs (same origin or CORS-enabled)</small></legend>
+            <label>Logo <input name="logo" placeholder="https://…/logo.svg" /></label>
+            <label>Logo mark <input name="logoMark" placeholder="https://…/mark.svg" /></label>
+            <label>Photo <input name="photo" placeholder="https://…/me.jpg" /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Colors</legend>
+            <div class="colors" id="colors"></div>
+            <label class="check"><input type="checkbox" name="iridescence" /> Holographic sheen</label>
+          </fieldset>
+
+          <button type="button" id="reset">Reset to defaults</button>
+        </form>
+
+        <section class="snippet">
+          <div class="tabs" role="tablist">
+            <button type="button" role="tab" data-tab="html" aria-selected="true">HTML</button>
+            <button type="button" role="tab" data-tab="react" aria-selected="false">React</button>
+            <button type="button" id="copy">Copy</button>
+          </div>
+          <pre><code id="code"></code></pre>
+        </section>
+      </aside>
+
+      <section class="stage">
+        <div id="badge"></div>
+      </section>
+    </main>
+    <script type="module" src="/demo/playground.js"></script>
+  </body>
+</html>

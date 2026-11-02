@@ -1,0 +1,16 @@
+{
+  "name": "badge-3d-react-example",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build" },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/rapier": "^2.2.0",
+    "badge-3d": "file:../..",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": { "@vitejs/plugin-react": "^6.1.2", "vite": "^8.3.5" }
+}
